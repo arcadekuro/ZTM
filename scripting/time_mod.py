@@ -1,4 +1,4 @@
-import time 
+import time
 
 """
 Understand what Epoch is.
@@ -21,5 +21,6 @@ def local_time():
     localtime = time.localtime(epc)
     print(localtime)  # ouput nor specific to format.
     print(time.ctime(epc))
+
 
 local_time()
