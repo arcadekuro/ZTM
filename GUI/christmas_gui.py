@@ -24,10 +24,13 @@ picture = [
 # if 0 -> print ' '
 # if 1 -> print *
 
+fill = '*'
+empty = ''
+
 for row in picture:
     for pixel in row:
-        if pixel == 1:
-            print('*', end='')  # end rm the default of printing new line
+        if pixel == 1:  # truthy value so don't need one
+            print(fill, end='')  # end rm the default of printing new line
         else:
-            print(' ', end='')
+            print(empty, end='')
     print(' ')  # need a new line after every row
