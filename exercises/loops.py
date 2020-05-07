@@ -34,11 +34,3 @@ for item in user.values():
 for item in user.keys():
     print(item)
 
-
-""" There are also while loops -
-While a condiion is happening, do something """
-
-i = 0
-while i < 50:
-    i = i + 2
-    print(i)

@@ -14,6 +14,8 @@ for i, char in enumerate('Hellooo'):
 # Creating a script that enumerates a list of numbers
 
 for i, char in enumerate(list(range(101))):
-    print(i, char)
     if char == 50:
         print(f'index of 50 is: {i}')
+
+
+
