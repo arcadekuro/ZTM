@@ -23,4 +23,7 @@ def hi_darth(name='Darth Vader', emoji='😈'):
           f'yes I am luke {emoji}')
 
 
-hi_darth()
+# functions exeercise
+
+def highest_even():
+    pass
