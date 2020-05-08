@@ -23,7 +23,43 @@ def hi_darth(name='Darth Vader', emoji='😈'):
           f'yes I am luke {emoji}')
 
 
-# functions exeercise
+# functions exercise. Highest even number should be printed.
 
-def highest_even():
-    pass
+def highest_even(li):
+    evens = []
+    for item in li:
+        if item % 2 == 0:
+            evens.append(item)
+    return max(evens)
+
+
+print(highest_even([10, 2, 3, 4, 8, 11]))
+
+a = 1
+
+
+def parent():
+    a = 10
+
+    def confusion():
+        return a
+    return confusion()
+
+
+# print(a)
+# print(parent())
+# Using the global keyword
+
+total = 0
+
+
+def count():
+    global total
+    total += 1
+    return total
+
+
+count()
+count()
+count()
+print(count())
