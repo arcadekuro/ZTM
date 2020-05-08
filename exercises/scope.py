@@ -1,17 +1,14 @@
-# Scope = what variables do I have access to?
-
-# Python looks @
-# 1. local variable
-# 2. parent local?
-# 3. Global
-# 4. Inbuilt functions
-
 
 def outer():
+    """
+    Info: returns the outer variable.
+    """
     x = "local"
 
     def inner():
-        # nonlocal x - if uncommeted returns local
+        """
+        Info: returns inner.
+        """
         x = "nonlocal"
         print("inner: ", x)
 
@@ -23,3 +20,13 @@ outer()
 
 # non local is a new keyword in python3
 # advise against it because it makes the code less predictable
+
+"""
+Scope is what variables do I have access to?
+# Python looks @
+# 1. local variable
+# 2. parent local?
+# 3. Global
+# 4. Inbuilt functions
+
+"""
