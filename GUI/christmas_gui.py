@@ -24,13 +24,15 @@ picture = [
 # if 0 -> print ' '
 # if 1 -> print *
 
-fill = '*'
-empty = ''
 
-for row in picture:
-    for pixel in row:
-        if pixel == 1:  # truthy value so don't need one
-            print(fill, end='')  # end rm the default of printing new line
-        else:
-            print(empty, end='')
-    print(' ')  # need a new line after every row
+def show_tree():
+    for image in picture:
+        for pixel in image:
+            if (pixel):  # truthy value so don't need  one
+                print('*', end='')  # end rms the   default of print new line
+            else:
+                print('', end='')
+        print('')  # need a new line after every row
+
+
+show_tree()
