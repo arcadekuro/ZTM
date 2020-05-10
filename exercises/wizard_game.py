@@ -32,12 +32,21 @@ def create_character():
 
 
 class User():
+    def __init__(self, email):
+        self.email = email
+
+
     def sign_in(self):
         return 'logged in'
 
 
 class Wizard(User):
+    def __init__(self, name, power, email):
+        User.__init__(self, email)
+
+        
     def __init__(self, name, power):
+
         self.name = name
         self.power = power
 
@@ -46,6 +55,50 @@ class Wizard(User):
 
 
 class Archer(User):
+
+    def __init__(self, name, arrows, email):
+        super().__init__(email)  # refers to the super class above Archer
+        self.name = name
+        self.arrows = arrows
+
+    def attack(self):
+        print(f'attacking with arrows: arrows left - {self.arrows}')
+
+    def check_arrows(self):
+        return f'{self.arrows} arrows remaining'
+
+    def run(self):
+        return 'ran really fast'
+
+# Gets tricker because you need to understand how the classes are implmented
+# to make sure not overwriting
+
+
+class HybridBorg(Wizard, Archer):
+    def __init__(self, name, power, arrows, email):
+        Archer.__init__(self, name, arrows, email)
+        Wizard.__init__(self, power, arrows, email)
+
+
+# inherited the functionality from user
+
+wizard1 = Wizard('Merlin', 50, 'merlin@gmail.com')
+# print(wizard1.email)
+hb1 = HybridBorg('Borgie', 200, 100, 'borgie@gmail.com')
+
+print(hb1.run())
+print(hb1.check_arrows())
+print(hb1.attack())
+
+# wizard1.attack()
+
+
+def player_attack(char):
+    char.attack()
+
+
+player_attack(wizard1)
+
     def __init__(self, name, num_arrows):
         self.name = name
         self.num_arrows = num_arrows
@@ -60,3 +113,4 @@ archer1 = Archer('Robin', 100)
 print(wizard1.sign_in())
 
 wizard1.attack()
+
