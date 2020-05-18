@@ -53,7 +53,7 @@ class Archer(User):
     def __init__(self, name, arrows, email):
         super().__init__(email)  # refers to the super class above Archer
         self.name = name
-        self.arrows = arrows
+        self .arrows = arrows
 
     def attack(self):
         print(f'attacking with arrows: arrows left - {self.arrows}')
