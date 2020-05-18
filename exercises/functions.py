@@ -1,4 +1,4 @@
-def say_hello(name, emoji):
+ def say_hello(name, emoji):
     print(f'hello {name}, {emoji}')
 
 
