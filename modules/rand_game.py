@@ -10,7 +10,7 @@ while True:
     try:
         guess = int(
             input(f'guess a number {sys.argv[1]} through {sys.argv[2]}!:\n'))
-        if int(sys.argv[1]) < guess < int(sys.argv[2] + 1):
+        if int(sys.argv[1]) < guess < int(sys.argv[2]):
             if guess == answer:
                 print('you\'re a Genius!')
                 break
